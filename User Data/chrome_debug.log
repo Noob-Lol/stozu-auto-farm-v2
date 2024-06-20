@@ -1,0 +1,40 @@
+[19388:944:0619/233459.734:WARNING:chrome_main_delegate.cc(742)] This is Chrome version 126.0.6478.61 (not a warning)
+[19388:944:0619/233459.923:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[19388:944:0619/233500.183:WARNING:browser_management_service.cc(128)] EnterpriseLogoUrl fetch failed with error code -1 and MIME type 
+[11836:15956:0619/233500.672:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[11836:15956:0619/233500.673:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[13184:20160:0619/233500.769:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[13184:20160:0619/233500.769:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[21364:13432:0619/233500.802:ERROR:gpu_channel_manager.cc(957)] Failed to create GLES3 context, fallback to GLES2.
+[21364:13432:0619/233500.802:ERROR:gpu_channel_manager.cc(968)] ContextResult::kFatalFailure: Failed to create shared context for virtualization.
+[18840:26592:0619/233500.906:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[18840:26592:0619/233500.906:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[4980:21492:0619/233500.974:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[4980:21492:0619/233500.974:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[7916:21992:0619/233501.068:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[7916:21992:0619/233501.068:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[12896:24860:0619/233502.089:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[12896:24860:0619/233502.089:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[19572:17952:0619/233502.095:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[19572:17952:0619/233502.095:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[18268:26672:0619/233502.198:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[18268:26672:0619/233502.198:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[26128:20268:0619/233502.300:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[26128:20268:0619/233502.300:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[6280:20328:0619/233503.661:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[6280:20328:0619/233503.661:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[26384:25412:0619/233504.083:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[26384:25412:0619/233504.083:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[24052:22120:0619/233505.949:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[24052:22120:0619/233505.949:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[19388:15208:0619/233506.438:ERROR:ev_root_ca_metadata.cc(162)] Failed to decode OID: 0
+[20340:27264:0619/233506.745:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[20340:27264:0619/233506.745:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[24208:13928:0619/233507.563:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[24208:13928:0619/233507.563:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[13852:27392:0619/233507.736:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[13852:27392:0619/233507.736:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[1716:25212:0619/233511.948:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[1716:25212:0619/233511.948:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
+[19432:24672:0619/233512.552:WARNING:runtime_features.cc(688)] AttributionReporting cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement in addition.
+[19432:24672:0619/233512.552:WARNING:runtime_features.cc(702)] AttributionReportingCrossAppWeb cannot be enabled in this configuration. Use --enable-features=ConversionMeasurement,AttributionReportingCrossAppWeb in addition.
