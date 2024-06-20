@@ -21,8 +21,8 @@ time.sleep(10)
 driver.switch_to.window(driver.window_handles[1])
 
 #after passing clouflare check and logging in
+input('Press Enter to start farm...')
 try:
-    input('Press Enter to start farm...')
     start_time = time.time()
     coin_count = 0
     print('Script started, press Ctrl+C to exit')
@@ -43,5 +43,5 @@ try:
 except KeyboardInterrupt:
     run_duration = time.time() - start_time
     print('Script stopped, exiting...')
-    driver.quit()
     print(f'Run time: {run_duration:.2f} seconds, earned {coin_count} coins.')
+    driver.quit()
