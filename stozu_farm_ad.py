@@ -29,16 +29,14 @@ try:
     driver.minimize_window()
     while True:
         driver.get('https://dash.stozu.net/earn/ad')
-        time.sleep(4)
+        time.sleep(10)
         while True:
             try:
-                button = driver.find_element(By.XPATH, "//button[@type='submit' and contains(@class, 'btn btn-primary btn-lg') and text()='Get Coins']")
-                button.click()
+                driver.find_element(By.XPATH, "//h1[text()='Time remaining: 0 seconds']")
                 break
             except NoSuchElementException:
                 driver.refresh()
-                time.sleep(2)
-        WebDriverWait(driver, 15).until(EC.url_to_be('https://dash.stozu.net/earn'))
+                time.sleep(1)
         coin_count += 1
 except KeyboardInterrupt:
     run_duration = time.time() - start_time
