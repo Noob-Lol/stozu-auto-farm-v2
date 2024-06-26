@@ -77,11 +77,10 @@ def main(coin_count=0,start_time=time.time()):
         driver.switch_to.window(driver.window_handles[0])
         print(f'Restarted, with {coin_count} coins.')
         main(coin_count,start_time)
-    finally:
-        run_duration = time.time() - start_time
-        print(f'Run time: {run_duration:.2f} seconds, earned {coin_count} coins.')
-        driver.quit()
-        exit()
+    run_duration = time.time() - start_time
+    print(f'Run time: {run_duration:.2f} seconds, earned {coin_count} coins.')
+    driver.quit()
+    exit()
 
 
 if __name__ == "__main__":
