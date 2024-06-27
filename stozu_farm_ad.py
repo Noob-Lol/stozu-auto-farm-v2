@@ -45,14 +45,15 @@ def cf_bypass():
     return result
 
 
-def main(coin_count=0,start_time=time.time()):
+def main(coin_count=0,start_time=0.0):
     try:
         driver.get('about:blank')
         if cf_bypass():
             print('Auto started! Press Ctrl+C to exit.')
         else:
             print('Script started. Press Ctrl+C to exit.')
-        #start_time = time.time()
+        if start_time == 0.0:
+            start_time = time.time()
         driver.minimize_window()
         while True:
             driver.get('https://dash.stozu.net/earn/ad')
@@ -77,11 +78,15 @@ def main(coin_count=0,start_time=time.time()):
         driver.switch_to.window(driver.window_handles[0])
         print(f'Restarted, with {coin_count} coins.')
         main(coin_count,start_time)
-    run_duration = time.time() - start_time
-    print(f'Run time: {run_duration:.2f} seconds, earned {coin_count} coins.')
+    if start_time == 0.0:
+        print('No run stats.')       
+    else:
+        run_duration = time.time() - start_time
+        print(f'Run time: {run_duration:.2f} seconds, earned {coin_count} coins.')
     driver.quit()
     exit()
 
 
 if __name__ == "__main__":
     main()
+        
