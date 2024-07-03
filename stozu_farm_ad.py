@@ -55,6 +55,11 @@ while True:
                             input('Unhandled error, pls check window.')
                     driver.refresh()
                     time.sleep(2)
+                    try:
+                        driver.find_element(By.XPATH, "//h1[text()='Time remaining:  seconds']")
+                        break
+                    except NoSuchElementException:
+                        pass
             coin_count += 1
     except KeyboardInterrupt:
         print('Script stopped, exiting...')
