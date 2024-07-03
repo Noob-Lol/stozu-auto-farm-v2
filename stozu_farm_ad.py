@@ -20,18 +20,19 @@ driver = webdriver.Chrome(options=options)
 
 coin_count=0
 start_time=0.0
+driver.get('about:blank')
+driver.get(f'file://{script_path}/noob-script.user.js')
+time.sleep(1)
+driver.switch_to.window(driver.window_handles[1])
+body=driver.find_element(By.TAG_NAME, "body")
+body.send_keys(Keys.CONTROL,Keys.ENTER)
+driver.close()
 while True:
     try:
-        driver.get('https://dash.stozu.net/earn')
-        driver.get(f'file://{script_path}/noob-script.user.js')
-        time.sleep(1)
-        driver.switch_to.window(driver.window_handles[1])
-        body=driver.find_element(By.TAG_NAME, "body")
-        body.send_keys(Keys.CONTROL,Keys.ENTER)
-        driver.close()
         driver.switch_to.window(driver.window_handles[0])
+        driver.get('https://dash.stozu.net/home')
         try:
-            WebDriverWait(driver, 120).until(EC.url_to_be('https://dash.stozu.net/earn'))
+            WebDriverWait(driver, 120).until(EC.url_to_be('https://dash.stozu.net/home'))
             print('Auto started! Press Ctrl+C to exit.')
         except TimeoutException:
             input('Timed out! Press Enter to start farm.')
@@ -65,9 +66,11 @@ while True:
         print('Script stopped, exiting...')
         break
     except Exception as e:
+        if "disconnected: not connected to DevTools" in str(e):
+            print("Browser was closed. Exiting...")
+            break
         print(f"An error occurred: {e}")
-        input('Caught an error! Press Enter restart.')
-        driver.switch_to.window(driver.window_handles[0])
+        #input('Caught an error! Press Enter restart.')
         print(f'Restarted, with {coin_count} coins.')
         continue
 if start_time == 0.0:
