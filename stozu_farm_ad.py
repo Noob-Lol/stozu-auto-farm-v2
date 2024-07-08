@@ -1,5 +1,4 @@
-import time, os, sys
-from dotenv import load_dotenv
+import time, os
 from selenium import webdriver
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
@@ -7,29 +6,20 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
-load_dotenv()
-# "py stozu_farm_ad.py <cookie variable name>" for this to work
-# where <cookie variable name> is the .env entry
-if len(sys.argv) < 2:
-    print("Cookie variable name not provided, login manually.")
-variable_name = sys.argv[1]
-cookie = os.environ.get(variable_name)
-if not cookie:
-    print(f"Variable '{variable_name}' not found")
-    sys.exit(1)
+
 script_path = os.path.abspath(os.path.dirname(__file__))
 options=webdriver.ChromeOptions()
+options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--disable-gpu')
 # yay stozu proxy!
 options.add_argument("--proxy-server=http://node1.stozu.net:6005")
 extensions_path = os.path.expandvars('%LOCALAPPDATA%/Google/Chrome/User Data/Default/Extensions')
-ublock_path = os.path.join(extensions_path,'cjpalhdlnbpafiamejdnhcphjbkeiagm')
-if os.path.isdir(ublock_path):
-    ublock_path = os.path.join(ublock_path, os.listdir(ublock_path)[0])
-else:
-    raise FileNotFoundError
-options.add_argument(f'--load-extension={ublock_path}')
+required_extensions=['cjpalhdlnbpafiamejdnhcphjbkeiagm','mpbjkejclgfgadiemmefgebjfooflfhl']
+# idk what this is but it works
+all_extensions = ','.join(os.path.join(extensions_path, ext, os.listdir(os.path.join(extensions_path, ext))[0]) for ext in required_extensions)
+options.add_argument(f'--load-extension={all_extensions}')
 options.add_experimental_option('excludeSwitches', ['enable-automation'])
+options.add_experimental_option('useAutomationExtension', False)
 
 ub_filters = '''!Noob filters, website##.element
 dash.stozu.net##.elevation-4.sidebar-dark-primary.sidebar-open.main-sidebar
@@ -48,17 +38,12 @@ with webdriver.Chrome(options=options) as driver:
             if first_run:
                 first_run = False
                 driver.get('https://dash.stozu.net/home')
-                time.sleep(5)
-                if cookie:
-                    driver.add_cookie({"name": "stozu_free_session", "value": f"{cookie}"})
-                    print('Successfully logged in with cookie.')
-                else:
-                    try:
-                        WebDriverWait(driver, 120).until(EC.url_to_be('https://dash.stozu.net/home'))
-                        print('Auto started! Press Ctrl+C to exit.')
-                    except TimeoutException:
-                        input('Timed out! Press Enter to start farm.')
-                        print('Script started. Press Ctrl+C to exit.')
+                try:
+                    WebDriverWait(driver, 120).until(EC.url_to_be('https://dash.stozu.net/home'))
+                    print('Auto started! Press Ctrl+C to exit.')
+                except TimeoutException:
+                    input('Timed out! Press Enter to start farm.')
+                    print('Script started. Press Ctrl+C to exit.')
                 driver.minimize_window()
                 driver.get("chrome-extension://cjpalhdlnbpafiamejdnhcphjbkeiagm/dashboard.html#1p-filters.html")
                 time.sleep(1)

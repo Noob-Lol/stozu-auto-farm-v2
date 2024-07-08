@@ -5,7 +5,7 @@ Made on Python with Selenium WebDriver.
 
 **This is Adsense version as Linkvertise got nuked. XD**
 ## Update info
-- Added option to login with cookie as captcha was too hard.
+- Captcha solving extension as captcha was too hard.
 - Switched to regular Chrome, as I implemented everything without the need for a profile.
 - Unlimited speed*
 > [!TIP]
@@ -16,14 +16,12 @@ Made on Python with Selenium WebDriver.
 - Read [proxy info](#proxy-info) for more.
 # Requirements
 - [Python](https://www.python.org/downloads/)
-- Selenium, dotenv: ```pip install selenium```, ```pip install python-dotenv```
+- Selenium: ```pip install selenium```
 - Google Chrome
-- [uBlock Origin](https://chromewebstore.google.com/detail/cjpalhdlnbpafiamejdnhcphjbkeiagm) in your default chrome profile.
+- [uBlock Origin](https://chromewebstore.google.com/detail/cjpalhdlnbpafiamejdnhcphjbkeiagm), [Buster](https://chromewebstore.google.com/detail/mpbjkejclgfgadiemmefgebjfooflfhl) extensions in your default chrome profile.
 # How to use
-- Download and unzip the files.
-- Get "stozu_free_session" cookie from https://dash.stozu.net and add it in .env file.
-- To secure your cookies, do not share the contents of .env file with anyone.
-- Run script: ```py stozu_farm_ad.py cookie```
+- Download the script.
+- Run script: ```py stozu_farm_ad.py```
 - Guaranteed to work on Windows, other os - idk.
 ## Proxy info
 > [!WARNING]  
