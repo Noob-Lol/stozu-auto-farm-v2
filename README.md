@@ -1,3 +1,7 @@
+# Important
+Archived because stozu shutdown. 
+
+If you know any hosting that has farmable coins - dm me (n01b) on discord
 # Stozu auto farm
 Automated credit farm on [stozu](https://dash.stozu.net/), speed is ~5 per minute, per instance. 
 
@@ -33,4 +37,4 @@ Made on Python with Selenium WebDriver.
 # Contributing
 If you know how to improve something - make a pull request.
 ## Made by
-n01b (discord), https://discord.gg/NoobNetwork
+n01b (discord)
